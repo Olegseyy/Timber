@@ -1,6 +1,4 @@
-<?php
-wp_head();
-?>
+<?php wp_head(); ?>
 	<main id="primary" class="site-main">
 		<?php
 		while ( have_posts() ) :
@@ -18,4 +16,4 @@ wp_head();
 		endwhile; 
 		?>
 	</main>
-<?php
+<?php wp_footer(); ?>
