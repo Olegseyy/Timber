@@ -25,5 +25,3 @@ function localhost_scripts() {
 }    
 
 
-
-

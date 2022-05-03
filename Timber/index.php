@@ -34,7 +34,7 @@
 				}
 			?>					
 			<div class="list__house_btn">
-				<a class="blog__btn" href="<?php the_permalink(); ?>">На главную</a>
+				<a class="blog__btn" href="">На главную</a>
 			</div>
 		</div>		
 	</div>
