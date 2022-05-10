@@ -1,9 +1,11 @@
 <?php wp_head(); ?>
 <main id="primary" class="site-main">
-	
-	<div class="blog__items">
-		<div class="container">	
-			
+	<?php 
+			$cats = get_the_category_list( ', ' );
+			echo '<p>Категория: '. $cats .'</p>';
+		 ?>
+	<div class="container">	
+		<div class="blog__items">
 			<div class="blog__title" > 
 				<?php the_title(); ?> 
 			</div>
@@ -17,11 +19,12 @@
 					<?php the_author(); ?>
 				</div>
 				<div class="date">
-					<?php the_date(); ?>
+					<?php the_time('F jS, Y') ?>
 				</div>
 			</div>
-			<a href="<?php the_permalink (221); ?>" ><button class="list_btn">Вернуться к списку домов</button></a>
+			<a href="/localhost/home/" ><button class="list_btn">Вернуться к списку домов</button></a>	
 		</div> 
 	</div>
 </main>
 <?php wp_footer(); ?>
+

@@ -1,14 +1,12 @@
-<?php
-wp_head();
-?>
-	<main id="primary" class="site-main">
-
+<?php wp_head(); ?>
+<main id="primary" class="site-main">
+	<?php get_sidebar(); ?>
+	<div class="container">
 		<?php
 		while ( have_posts() ) :
 			the_post();
-
 			get_template_part( 'template-parts/content', get_post_type() );
-
+			
 			the_post_navigation(
 				array(
 					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'timber' ) . '</span> <span class="nav-title">%title</span>',
@@ -18,8 +16,8 @@ wp_head();
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
-
-		endwhile; 
+		endwhile;
 		?>
-	</main>
+	</div>	
+</main>
 <?php
