@@ -1,9 +1,9 @@
 <?php wp_head(); ?>
 <main id="primary" class="site-main">
 	<?php 
-			$cats = get_the_category_list( ', ' );
-			echo '<p>Категория: '. $cats .'</p>';
-		 ?>
+		$cats = get_the_category_list( ', ' );
+		echo '<p>Категория: '. $cats .'</p>';
+	?>
 	<div class="container">	
 		<div class="blog__items">
 			<div class="blog__title" > 
@@ -22,7 +22,7 @@
 					<?php the_time('F jS, Y') ?>
 				</div>
 			</div>
-			<a href="/localhost/home/" ><button class="list_btn">Вернуться к списку домов</button></a>	
+			<a href= <?php home_url(); ?> ><button class="list_btn">Вернуться к списку домов</button></a>	
 		</div> 
 	</div>
 </main>
